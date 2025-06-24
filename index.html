@@ -1,770 +1,161 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <title>João 1 - Interlinear</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: "Times New Roman", Times, serif;
-      margin: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    h1 {
-      text-align: center;
-      text-transform: uppercase;
-      color: purple;
-      font-weight: bold;
-      margin-bottom: 24px;
-      font-size: 1.6em;
-    }
-
-    .container {
-      display: flex;
-      flex-direction: row;
-      width: 100%;
-      gap: 20px;
-    }
-
-    .coluna {
-      max-height: 80vh;
-      overflow-y: auto;
-      padding: 10px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      box-sizing: border-box;
-    }
-
-.coluna.grego {
-  width: 40%;
-  direction: ltr; /* Left-To-Right = Esquerda para Direita */
-}
-
-      text-align: right;
-      font-size: 1.2em;
-      line-height: 1.6em;
-    }
-
-    .coluna.c2 {
-      width: 60%;
-    }
-
-    .versiculo {
-      display: flex;
-      margin-bottom: 12px;
-    }
-
-    .texto-hebraico {
-      width: 100%;
-      padding-right: 10px;
-    }
-
-    .texto-traducao {
-      width: 100%;
-    }
-
-    .grade {
-      display: flex;
-      flex-wrap: wrap;
-    }
-
-.celula {
-    display: inline-block;
-    vertical-align: top;
-    margin: 4px;            /* Espaço mínimo horizontal e vertical entre as células */
-    padding: 2px;           /* Espaço interno da célula */
-    box-sizing: border-box; /* Garante que o padding não estoure a largura da célula */
-}
-
-
-    .linha1 {
-      color: blue;
-      font-style: italic;
-      font-size: 0.9em;
-    }
-
-    .linha2 {
-      color: black;
-      font-size: 1.2em;
-      font-weight: bold;
-    }
-
-    .linha3 {
-      color: purple;
-    }
-
-    .numero {
-      color: red;
-      font-weight: bold;
-    }
-
-    .hebraico span,
-    .c2 span {
-      cursor: pointer;
-    }
-
-    .highlight {
-      background-color: yellow;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: row;
-      }
-
-      .coluna.hebraico {
-        width: 30%;
-      }
-
-      .coluna.c2 {
-        width: 70%;
-      }
-
-      .celula {
-        width: 100px;
-      }
-    }
-  </style>
-  
-</head>
-<body>
-  <h1>Escrituras Gregas - Nestle 1904 Interlinear</h1>
-  <h5><span class="numero">Nota: 1) ao 'tocar' numa palavra grega, sua cópia é destacada nas duas colunas; 2) acima das palavras gregas estão a sua transliteração; 3) os números são da sequência de Strong, linkados para abrir a Concordância em Inglês</span></h5>
-  <h2>João capítulo 1</h2>
-  <div class="container">
-    <div class="coluna grego" id="coluna1">
-      <div class="versiculo">
-        <div class="texto-grego">
-          <p>
-		<span class="numero">1 </span><span data-id="Ἐν">Ἐν</span>
-		<span data-id="ἀρχῇ">ἀρχῇ</span>
-		<span data-id="ἦν">ἦν</span>
-		<span data-id="ὁ">ὁ</span>
-		<span data-id="Λόγος">Λόγος,</span>
-		<span data-id="καὶ">καὶ</span>
-		<span data-id="ὁ">ὁ</span>
-		<span data-id="Λόγος">Λόγος</span>
-		<span data-id="ἦν">ἦν</span>
-		<span data-id="πρὸς">πρὸς</span>
-		<span data-id="τὸν">τὸν</span>
-		<span data-id="Θεόν">Θεόν</span>
-		<span data-id="καὶ">καὶ</span>
-		<span data-id="Θεόν">Θεὸς</span>
-		<span data-id="ἦν">ἦν</span>
-		<span data-id="ὁ">ὁ</span>
-		<span data-id="Λόγος">Λόγος.</span>
-          </p>
-        </div>
-      </div>
-      <div class="versiculo">
-        <div class="texto-grego">
-          <p>
-            <span class="numero">2 </span><span data-id="Οὗτος">Οὗτος</span>
-		<span data-id="ἦν">ἦν</span>
-		<span data-id="ἐν">ἐν</span>
-		<span data-id="ἀρχῇ">ἀρχῇ</span>
-		<span data-id="πρὸς">πρὸς</span>
-		<span data-id="τὸν">τὸν</span>
-		<span data-id="Θεόν">Θεόν</span>
-			          </p>
-        </div>
-      </div>
-      <div class="versiculo">
-        <div class="texto-grego">
-          <p>
-		  <span class="numero">3 </span><span data-id="πάντα">πάντα</span>
-		<span data-id="δι’">δι’</span>
-		<span data-id="αὐτοῦ">αὐτοῦ</span>
-		<span data-id="ἐγένετο">ἐγένετο</span>
-		<span data-id="καὶ">καὶ</span>
-		<span data-id="χωρὶς">χωρὶς</span>
-		<span data-id="αὐτοῦ">αὐτοῦ</span>
-		<span data-id="ἐγένετο">ἐγένετο</span>
-		<span data-id="οὐδὲ">οὐδὲ</span>
-		<span data-id="ἕν">ἕν</span>
-		<span data-id="ὃ">ὃ</span>
-		<span data-id="γέγονεν">γέγονεν</span>
-		<span class="numero">4 </span><span data-id="ἐν">ἐν</span>
-		<span data-id="αὐτῷ">αὐτῷ</span>
-		<span data-id="ζωὴ">ζωὴ</span>
-		<span data-id="ἦν">ἦν</span>
-		<span data-id="καὶ">καὶ</span>
-		<span data-id="ἡ">ἡ</span>
-		<span data-id="ζωὴ">ζωὴ</span>
-		<span data-id="ἦν">ἦν</span>
-		<span data-id="τὸ">τὸ</span>
-		<span data-id="φῶς">φῶς</span>
-		<span data-id="τῶν">τῶν</span>
-		<span data-id="ἀνθρώπων">ἀνθρώπων</span>
-			</p>
-        </div>
-         </div>
-      <div class="versiculo">
-        <div class="texto-grego">
-		<span class="numero">5 </span><span data-id="καὶ">καὶ</span>
-		<span data-id="τὸ">τὸ</span>
-		<span data-id="φῶς">φῶς</span>
-		<span data-id="ἐν">ἐν</span>
-		<span data-id="τῇ">τῇ</span>
-		 <span data-id="σκοτία">σκοτίᾳ</span>
-        <span data-id="φαίνει">φαίνει</span>
-        <span data-id="καὶ">καὶ</span>
-        <span data-id="ἡ">ἡ</span>
-        <span data-id="σκοτία">σκοτία</span>
-		<span data-id="αὐτοῦ">αὐτὸ</span>
-		<span data-id="οὐ">οὐ</span>
-		<span data-id="κατέλαβεν">κατέλαβεν</span>
-			</p>
-        </div>
-         </div>
-      <div class="versiculo">
-        <div class="texto-grego">
-		<span class="numero">6 </span><span data-id="Ἐγένετο">Ἐγένετο</span>
-		<span data-id="ἄνθρωπος">ἄνθρωπος,</span>
-		<span data-id="ἀπεσταλμένος">ἀπεσταλμένος</span>
-		<span data-id="παρὰ">παρὰ</span>
-		<span data-id="Θεόν">Θεοῦ,</span>
-		<span data-id="ὄνομα">ὄνομα</span>
-		<span data-id="αὐτοῦ">αὐτῷ</span>
-		<span data-id="Ἰωάνης">Ἰωάνης·</span>
-			</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="coluna c2" id="coluna2">
-      <div class="versiculo">
-        <div class="texto-traducao">
-          <div class="grade">
-            <div class="celula">
-               <div class="linha1">en 1722</div>
-              <div class="linha2"><span data-id="Ἐν">Ἐν</span></div>
-              <div class="linha3"><span class="numero">1 </span>No</div>
-            </div>
-            <div class="celula">
-              <div class="linha1">archē 746</div>
-              <div class="linha2"><span data-id="ἀρχῇ">ἀρχῇ</span></div>
-              <div class="linha3">princípio</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">ēn 1510</div>
-              <div class="linha2"><span data-id="ἦν">ἦν</span></div>
-              <div class="linha3">era</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">ho 3588</div>
-              <div class="linha2"><span data-id="ὁ">ὁ</span></div>
-              <div class="linha3">a</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">logos 3056</div>
-              <div class="linha2"><span data-id="Λόγος">Λόγος,</span></div>
-              <div class="linha3">palavra,</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">kai 2532</div>
-              <div class="linha2"><span data-id="καὶ">καὶ</span></div>
-              <div class="linha3">e</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">ho 3588</div>
-              <div class="linha2"><span data-id="ὁ">ὁ</span></div>
-              <div class="linha3">a</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">logos 3056</div>
-              <div class="linha2"><span data-id="Λόγος">Λόγος</span></div>
-              <div class="linha3">palavra</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">ēn 1510</div>
-              <div class="linha2"><span data-id="ἦν">ἦν</span></div>
-              <div class="linha3">estava</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">pros 4314</div>
-              <div class="linha2"><span data-id="πρὸς">πρὸς</span></div>
-              <div class="linha3">com</div>
-            </div>
-            <div class="celula">
-              <div class="linha1">ton 3588</div>
-              <div class="linha2"><span data-id="τὸν">τὸν</span></div>
-              <div class="linha3">o</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">theon G2316</div>
-              <div class="linha2"><span data-id="Θεόν">Θεόν,</span></div>
-              <div class="linha3">Deus,</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">kai 2532</div>
-              <div class="linha2"><span data-id="καὶ">καὶ</span></div>
-              <div class="linha3">e</div>
-		</div>
- <style>
-.tooltip {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-}
-
-.tooltip-icon {
-    color: #0077cc;
-    font-weight: bold;
-    margin-left: 5px;
-    font-size: 1.1em;
-}
-
-.tooltip .tooltiptext {
-    visibility: hidden;
-    width: 320px;
-    background-color: #fdfdfd;
-    color: #333;
-    text-align: left;
-    border-radius: 8px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
-    position: absolute;
-    z-index: 10;
-    top: 130%;  /* Agora a caixa aparece abaixo do ícone */
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: opacity 0.3s;
-    font-size: 0.8em;  /* Texto menor */
-    line-height: 1.3em;
-}
-
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-}
-
-.tooltip .tooltiptext::before {
-    content: "";
-    position: absolute;
-    bottom: 100%;  /* Seta na parte de cima da caixa */
-    left: 50%;
-    margin-left: -6px;
-    border-width: 6px;
-    border-style: solid;
-    border-color: transparent transparent #ccc transparent;
-}
-
-.tooltip .tooltiptext a {
-    color: #0077cc;
-    text-decoration: underline;
-    word-break: break-word;
-}
-</style>
-
-<div class="celula">
-    <div class="linha1">theos 2316</div>
-    <div class="linha2"><span data-id="Θεόν">Θεὸς</span></div>
-    <div class="linha3">
-        deus
-        <span class="tooltip">
-            <span class="tooltip-icon">*</span>
-            <div class="tooltiptext">
-                Aqui em João 1:1, a palavra <strong>Teos</strong> [Θεός] é diferente das demais; nos versículos 1 e 2, apenas as duas ocorrências de <strong>ton Teon</strong> [τὸν Θεόν] (com o artigo definido τὸν) se referem ao Deus Todo-Poderoso (Teon Θεόν).<br>
-                Compare com as versões em inglês:<br>Diaglott 
-                <a href="https://studybible.info/Diaglott/John%201:1" target="_blank" rel="noopener noreferrer">
-                    https://studybible.info/Diaglott/John%201:1
-					</a>
-					<br>
-					Moffatt 
-                <a href="https://studybible.info/Moffatt/John%201:1" target="_blank" rel="noopener noreferrer">
-                    https://studybible.info/Moffatt/John%201:1
-				 </a>
-				<br> 
-				Goodspeed 
-                <a href="https://studybible.info/Goodspeed/John%201:1" target="_blank" rel="noopener noreferrer">
-                    https://studybible.info/Goodspeed/John%201:1
-</a>
-            </div>
-        </span>
-    </div>
-</div>
-
-            <div class="celula">
-              <div class="linha1">ēn 1510</div>
-              <div class="linha2"><span data-id="ἦν">ἦν</span></div>
-              <div class="linha3">era</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">ho 3588</div>
-              <div class="linha2"><span data-id="ὁ">ὁ</span></div>
-              <div class="linha3">a</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">logos 3056</div>
-              <div class="linha2"><span data-id="Λόγος">Λόγος</span></div>
-              <div class="linha3">palavra.</div>
-		</div>
-            <div class="grade">
-            <div class="celula">
-              <div class="linha1">houtos 3778</div>
-              <div class="linha2"><span data-id="Οὗτος">Οὗτος</span></div>
-              <div class="linha3"><span class="numero">2 </span>Ele</div>
-            </div>
-            <div class="celula">
-              <div class="linha1">ēn 1510</div>
-              <div class="linha2"><span data-id="ἦν">ἦν</span></div>
-              <div class="linha3">estava</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">en 1722</div>
-              <div class="linha2"><span data-id="ἐν">ἐν</span></div>
-              <div class="linha3">no</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">archē 746</div>
-              <div class="linha2"><span data-id="ἀρχῇ">ἀρχῇ</span></div>
-              <div class="linha3">princípio</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">pros 4314</div>
-              <div class="linha2"><span data-id="πρὸς">πρὸς</span></div>
-              <div class="linha3">com</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">ton 3588</div>
-              <div class="linha2"><span data-id="τὸν">τὸν</span></div>
-              <div class="linha3">o</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">theon 2316</div>
-              <div class="linha2"><span data-id="Θεόν">Θεόν.</span></div>
-              <div class="linha3">Deus.</div>
-		</div>
-            <div class="grade">
-            <div class="celula">
-              <div class="linha1">panta 3956</div>
-              <div class="linha2"><span data-id="πάντα">πάντα</span></div>
-              <div class="linha3"><span class="numero">3 </span>Tudo</div>
-            </div>
-            <div class="celula">
-              <div class="linha1">di 1223</div>
-              <div class="linha2"><span data-id="δι’">δι’</span></div>
-              <div class="linha3">por</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">autou 846</div>
-              <div class="linha2"><span data-id="αὐτοῦ">αὐτοῦ</span></div>
-              <div class="linha3">ele</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">egeneto 1096</div>
-              <div class="linha2"><span data-id="ἐγένετο">ἐγένετο</span></div>
-              <div class="linha3">foi feito,</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">kai 2532</div>
-              <div class="linha2"><span data-id="καὶ">καὶ</span></div>
-              <div class="linha3">e</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">chōris 5565</div>
-              <div class="linha2"><span data-id="χωρὶς">χωρὶς</span></div>
-              <div class="linha3">sem</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">autou 846</div>
-              <div class="linha2"><span data-id="αὐτοῦ">αὐτοῦ</span></div>
-              <div class="linha3">ele</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">egeneto 1096</div>
-              <div class="linha2"><span data-id="ἐγένετο">ἐγένετο</span></div>
-              <div class="linha3">foi feito</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">oude 3761</div>
-              <div class="linha2"><span data-id="οὐδὲ">οὐδὲ</span></div>
-              <div class="linha3">nada.</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">hen 1520</div>
-              <div class="linha2"><span data-id="ἕν">ἕν</span></div>
-              <div class="linha3">O</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">ho 3739</div>
-              <div class="linha2"><span data-id="ὃ">ὃ</span></div>
-              <div class="linha3">que</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">gegonen 1096</div>
-              <div class="linha2"><span data-id="γέγονεν">γέγονεν</span></div>
-              <div class="linha3">veio a existir</div>
-		</div>
-			  <div class="celula">
-              <div class="linha1">en 1722</div>
-              <div class="linha2"><span data-id="ἐν">ἐν</span></div>
-              <div class="linha3"><span class="numero">4 </span>por</div>
-            </div>
-			<div class="celula">
-              <div class="linha1">autō 846</div>
-              <div class="linha2"><span data-id="αὐτῷ">αὐτῷ</span></div>
-              <div class="linha3">ele</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">zōē 2222</div>
-              <div class="linha2"><span data-id="ζωὴ">ζωὴ</span></div>
-              <div class="linha3">[a]vida</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">ēn 1510</div>
-              <div class="linha2"><span data-id="ἦν">ἦν</span></div>
-              <div class="linha3">foi,</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">kai 2532</div>
-              <div class="linha2"><span data-id="καὶ">καὶ</span></div>
-              <div class="linha3">e</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">hē 3588</div>
-              <div class="linha2"><span data-id="ἡ">ἡ</span></div>
-              <div class="linha3">a</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">zōē 2222</div>
-              <div class="linha2"><span data-id="ζωὴ">ζωὴ</span></div>
-              <div class="linha3">vida</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">ēn 1510</div>
-              <div class="linha2"><span data-id="ἦν">ἦν</span></div>
-              <div class="linha3">era</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">to 3588</div>
-              <div class="linha2"><span data-id="τὸ">τὸ</span></div>
-              <div class="linha3">a</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">phōs 5457</div>
-              <div class="linha2"><span data-id="φῶς">φῶς</span></div>
-              <div class="linha3">luz</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">tōn 3588</div>
-              <div class="linha2"><span data-id="τῶν">τῶν</span></div>
-              <div class="linha3">dos</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">anthrōpōn 444</div>
-              <div class="linha2"><span data-id="ἀνθρώπων">ἀνθρώπων</span></div>
-              <div class="linha3">homens.</div>
-</div>
-	    <div class="grade">
-            <div class="celula">
-              <div class="linha1">kai 2532</div>
-              <div class="linha2"><span data-id="καὶ">καὶ</span></div>
-              <div class="linha3"><span class="numero">5 </span>E</div>
-            </div>
-            <div class="celula">
-              <div class="linha1">to 3588</div>
-              <div class="linha2"><span data-id="τὸ">τὸ</span></div>
-              <div class="linha3">a</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">phōs 5457</div>
-              <div class="linha2"><span data-id="φῶς">φῶς</span></div>
-              <div class="linha3">luz</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">en 1722</div>
-              <div class="linha2"><span data-id="ἐν">ἐν</span></div>
-              <div class="linha3">em</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">tē 3588</div>
-              <div class="linha2"><span data-id="τῇ">τῇ</span></div>
-              <div class="linha3">a</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">skotia 4653</div>
-               <div class="linha2"><span data-id="σκοτία">σκοτίᾳ</span></div>
-              <div class="linha3">[na] escuridão</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">phainei 5316</div>
-              <div class="linha2"><span data-id="φαίνει">φαίνει</span></div>
-              <div class="linha3">brilha;</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">kai 2532</div>
-              <div class="linha2"><span data-id="καὶ">καὶ</span></div>
-              <div class="linha3">e</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">hē 3588</div>
-              <div class="linha2"><span data-id="ἡ">ἡ</span></div>
-              <div class="linha3">a</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">skotia 4653</div>
-              <div class="linha2"><span data-id="σκοτία">σκοτία</span></div>
-              <div class="linha3">escuridão,</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">auto 846</div>
-              <div class="linha2"><span data-id="αὐτοῦ">αὐτὸ</span></div>
-              <div class="linha3">esta</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">ou 3756</div>
-              <div class="linha2"><span data-id="οὐ">οὐ</span></div>
-              <div class="linha3">não</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">katelaben 2638</div>
-              <div class="linha2"><span data-id="κατέλαβεν">κατέλαβεν</span></div>
-              <div class="linha3">venceu.</div>
-		</div>
-		</div>
- </div>
-	    <div class="grade">
-            <div class="celula">
-              <div class="linha1">egeneto 1096</div>
-              <div class="linha2"><span data-id="Ἐγένετο">Ἐγένετο</span></div>
-              <div class="linha3"><span class="numero">6 </span>Surgiu</div>
-            </div>
-            <div class="celula">
-              <div class="linha1">anthrōpos 444</div>
-              <div class="linha2"><span data-id="ἄνθρωπος">ἄνθρωπος,</span></div>
-              <div class="linha3">[um] homem</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">apestalmenos 649</div>
-              <div class="linha2"><span data-id="ἀπεσταλμένος">ἀπεσταλμένος</span></div>
-              <div class="linha3">enviado</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">para 3844</div>
-              <div class="linha2"><span data-id="παρὰ">παρὰ</span></div>
-              <div class="linha3">por</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">theou 2316</div>
-              <div class="linha2"><span data-id="Θεόν">Θεοῦ,</span></div>
-              <div class="linha3">Deus.</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">onoma 3686</div>
-              <div class="linha2"><span data-id="ὄνομα">ὄνομα</span></div>
-              <div class="linha3">[O] nome</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">autō 846</div>
-              <div class="linha2"><span data-id="αὐτοῦ">αὐτῷ</span></div>
-              <div class="linha3">dele:</div>
-		</div>
-            <div class="celula">
-              <div class="linha1">iōanēs 2491</div>
-              <div class="linha2"><span data-id="Ἰωάνης">Ἰωάνης·</span></div>
-              <div class="linha3">João.</div>
-		</div>
-			  </div>
-      </div>
-
-    </div>
+<div id="notas-strong" style="display: none;">
+  <div id="G1">
+    <strong>α (alfa)</strong><br>
+    De origem hebraica; a primeira letra do alfabeto grego; frequentemente usada como "an", antes de uma vogal e, também em composição (como uma contração de aneu [G427]) no sentido de privação; ocasionalmente, porém, palavras começando com esta letra podem ter o sentido de união (como na contração de ama [G260])<br>
+    <em>3 ocorrências: Apocalipse 1:8; 21:6; 22:13</em>
   </div>
-
- <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const spans = document.querySelectorAll("span[data-id]");
-
-    spans.forEach(span => {
-      span.addEventListener("mouseenter", () => {
-        const id = span.getAttribute("data-id");
-        const allMatching = document.querySelectorAll(`span[data-id="${id}"]`);
-        allMatching.forEach(el => el.classList.add("highlight"));
-      });
-
-      span.addEventListener("mouseleave", () => {
-        const id = span.getAttribute("data-id");
-        const allMatching = document.querySelectorAll(`span[data-id="${id}"]`);
-        allMatching.forEach(el => el.classList.remove("highlight"));
-      });
-    });
-  });
-</script>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  // Criar o iframe pop-up
-  const popup = document.createElement("iframe");
-  popup.style.position = "absolute";
-  popup.style.width = "90vw";
-  popup.style.maxWidth = "600px";
-  popup.style.height = "300px";
-  popup.style.border = "2px solid #ccc";
-  popup.style.borderRadius = "12px";
-  popup.style.boxShadow = "0 4px 15px rgba(0,0,0,0.4)";
-  popup.style.zIndex = "9999";
-  popup.style.display = "none";
-  popup.style.background = "#fff";
-  popup.style.transition = "opacity 0.2s ease-in-out";
-
-  // Botão de fechar
-  const closeBtn = document.createElement("button");
-  closeBtn.innerHTML = "&times;";
-  closeBtn.style.position = "absolute";
-  closeBtn.style.top = "-10px";
-  closeBtn.style.right = "-10px";
-  closeBtn.style.zIndex = "10000";
-  closeBtn.style.border = "none";
-  closeBtn.style.background = "#ff5555";
-  closeBtn.style.color = "white";
-  closeBtn.style.borderRadius = "50%";
-  closeBtn.style.width = "30px";
-  closeBtn.style.height = "30px";
-  closeBtn.style.cursor = "pointer";
-  closeBtn.style.fontSize = "18px";
-  closeBtn.style.boxShadow = "0 2px 6px rgba(0,0,0,0.3)";
-  closeBtn.addEventListener("click", () => popup.style.display = "none");
-
-  document.body.appendChild(popup);
-  document.body.appendChild(closeBtn);
-
-  // Detecta cliques em .linha1 com número Strong
-  document.querySelectorAll(".linha1").forEach(el => {
-    const match = el.textContent.match(/\b(G\d+)\b/i);
-    if (match) {
-      const strongId = match[1].toUpperCase();
-      el.style.cursor = "pointer";
-      el.addEventListener("click", function (e) {
-        e.stopPropagation();
-        const baseUrl = "https://joao1notasstrong.netlify.app";
-        popup.src = `${baseUrl}#${strongId}`;
-
-        // Posiciona próximo ao clique
-        const scrollY = window.scrollY || document.documentElement.scrollTop;
-        popup.style.top = `${e.clientY + scrollY + 10}px`;
-        popup.style.left = `${e.clientX + 10}px`;
-        popup.style.display = "block";
-        popup.style.opacity = "1";
-
-        // Posiciona botão de fechar
-        closeBtn.style.top = `${e.clientY + scrollY - 10}px`;
-        closeBtn.style.left = `${e.clientX + popup.offsetWidth - 10}px`;
-        closeBtn.style.display = "block";
-      });
-    }
-  });
-
-  // Fechar ao clicar fora
-  document.addEventListener("click", () => {
-    popup.style.display = "none";
-    closeBtn.style.display = "none";
-  });
-});
-</script>
-</body>
-</html>
+  <div id="G2">
+    <strong>Ααρων (Aaron)</strong><br>
+    De origem hebraica [H175]; Arão, irmão de Moisés<br>
+    <em>5 ocorrências: Lucas 1:5; Atos 7:40; Hebreus 5:4; 7:11; 9:4</em>
+  </div>
+  <div id="G3">
+    <strong>Αβαδδων (Abaddon)</strong><br>
+    De origem hebraica [H11]; destruidor<br>
+    <em>1 ocorrência: Apocalipse 1:11</em>
+  </div>
+  <div id="G4">
+    <strong>αβαρη (abares)</strong><br>
+    De a [G1] (como uma partícula negativa [não, sem]) e baros (peso) [G922]; não oneroso: oneroso, pesado, fardo<br>
+    <em>1 ocorrência: 2 Coríntios 11:9</em>
+  </div>
+  <div id="G5">
+    <strong>Αββα (Abba)</strong><br>
+    De origem caldeia (‘ab [H2]); pai, como vocativo: Aba<br>
+    <em>3 ocorrências: Marcos 14:36; Romanos 8:15; Gálatas 4:6</em>
+  </div>
+  <div id="G6">
+    <strong>Αβελ (Abel)</strong><br>
+    De origem hebraica (Hebel [H1893]); filho de Adão: Abel<br>
+    <em>4 ocorrências: Mateus 23:35; Lucas 11:51; Hebreus 11:4; 12:24</em>
+  </div>
+  <div id="G7">
+    <strong>Αβια (Abia)</strong><br>
+    De origem hebraica ‘Abiyah [H29]; nome de dois israelitas: Abias<br>
+    <em>3 ocorrências: Mateus 1:7 [2x]; Lucas 1:5</em>
+  </div>
+  <div id="G8">
+    <strong>Αβιαθαρ (Abiatar)</strong><br>
+    De origem hebraica ‘Ebyathar [H54]; um israelita: Abiatar<br>
+    <em>1 ocorrência: Marcos 2:26</em>
+  </div>
+  <div id="G9">
+    <strong>Αβιληνη (Abilene)</strong><br>
+    De origem estrangeira (compare com ‘abel [H58]); uma região da Síria: Abilene<br>
+    <em>1 ocorrência: Lucas 3:1</em>
+  </div>
+  <div id="G10">
+    <strong>Αβιουδ (Abioud)</strong><br>
+    De origem hebraica [H31]; um israelita: Abiúde<br>
+    <em>2 ocorrências: Mateus 1:13 [2x]</em>
+  </div>
+  <div id="G11">
+    <strong>Αβρααμ Abraam</strong><br>
+    de origem hebraica [H85]; o patriarca hebreu: Abraão<br>
+    <em>73 ocorrências: Mateus 1:1; 1:2; 1:17; 3:9 [2x]; 8:11; 22:32; Marcos 12:26; Lucas 1:55; 1:73; 3:8 [2x]; 3:34; 13:16; 13:28; 16:22; 16:23; 16:24; 16:25; 16:29; 16:30; 19:9; 20:37; João 8:33; 8:37; 8:39; 8:39 [2x]; 8:40; 8:52; 8:53; 8:56; 8:57; 8:58; Atos 3:13; 3:25; 7:2; 7:16; 7:17; 7:32; 13:26; Romanos 4:1; 4:2; 4:3; 4:9; 4:12; 4:13; 4:16; 9:7; 11:1; 2 Coríntios 11:22; Gálatas 3:6; 3:7; 3:8; 3:9; 3:14; 3:16; 3:18; 3:29; 4:22; Hebreus 2:16; 6:13; 7:1; 7:2; 7:4; 7:5; 7:6; 7:9; 11:8; 11:17; Tiago 2:21; 2:23; 1 Pedro 3:6</em>
+  </div>
+  <!-- Continue preenchendo daqui até G40 conforme o modelo acima -->
+  <div id="G2316">
+    <strong>θεος theos</strong><br>
+    uma divindade: deus, deuses; (com “ho” [G3588]) a Divindade suprema; figurativamente, um magistrado; pelo hebraísmo: muito, extremamente, Deus, divino<br>
+    <em>1343 ocorrências: At 7:20; Mt 1:23; Mt 3:9; Mt 3:16; Mt 4:3; Mt 4:4; Mt 4:6; Mt 4:7; Mt 4:10; Mt 5:8; Mt 5:9; Mt 6:24; Mt 6:30; Mt 6:33; Mt 8:29; Mt 9:8; Mt 12:4; Mt 12:28 [2]; Mt 14:33; Mt 15:3; Mt 15:4; Mateus 15:6; Mt 15:31; Mt 16:16; Mt 16:23; Mateus 19:6; Mt 19:17; Mt 19:24; Mt 19:26; Mt 21:12; Mateus 21:31; Mateus 21:43; Mateus 22:16; Mateus 22:21; Mateus 22:29; Mateus 22:30; Mateus 22:31; Mateus 22:32 [5]; Mateus 22:37; Mateus 23 :22; Mt 26:61; Mt 26:63 [2]; Mt 27:40; Mt 27:43 [2]; Mt 27:46 [2]; Mt 27:54; Sr 1:1; Sr 1: 14; Sr. 1:15; Sr. 1:24; Sr. 2:7; Sr. 2:12; Sr. 2:26; Sr. 3:11; Sr. 3:35; Sr. 4:11; Sr. 4:26; Sr. 4: 30; Marcos 5:7 [2]; Marcos 7:8; Marcos 7:9; Marcos 7:13; Marcos 8:33; Marcos 9:1; Mr 9:47; Marcos 10:6; Marcos 10:9; Marcos 10:14; Marcos 10:15; Marcos 10:18; Marcos 10:23; Marcos 10:24; Marcos 10:25; Mr 10:27 [2]; Marcos 11:22; Marcos 12:14; Marcos 12:17; Marcos 12:24; Marcos 12:26 [4]; Marcos 12:27 [2]; Marcos 12:29; Senhor 12:30; Marcos 12:32; Marcos 12:34; Marcos 13:19; Marcos 14:25; Marcos 15:34 [2]; Marcos 15:39; Marcos 15:43; Marcos 16:19; Lu 1:6; Lu 1:8; Lu 1:16; Lu 1:19; Lu 1:26; Lu 1:30; Lu 1:32; Lu 1:35; Lu 1:37; Lu 1:47; Lu 1:64; Lu 1:68; Lu 1:78; Lu 2:13; Lu 2:14; Lu 2:20; Lu 2:28; Lu 2:40; Lu 2:52; Lu 3:2; Lu 3:6; Lu 3:8; Lu 3:38; Lu 4:3; Lu 4:4; Lu 4:8; Lu 4:9; Lu 4:12; Lu 4:34; Lu 4:41; Lu 4:43; Lu 5:1; Lu 5:21; Lu 5:25; Lu 5:26; Lu 6:4; Lu 6:12; Lu 6:20; Lucas 7:16 [2]; Lu 7:28; Lu 7:29; Lu 7:30; Lu 8:1; Lu 8:10; Lu 8:11; Lu 8:21; Lu 8:28; Lu 8:39; Lu 9:2; Lu 9:11; Lu 9:20; Lu 9:27; Lu 9:43; Lu 9:60; Lu 9:62; Lu 10:9; Lu 10:11; Lu 10:27; Lucas 11:20 [2]; Lu 11:28; Lu 11:42; Lu 11:49; Lu 12:6; Lu 12:8; Lu 12:9; Lu 12:20; Lu 12:21; Lu 12:24; Lu 12:28; Lu 12:31; Lu 13:13; Lu 13:18; Lu 13:20; Lu 13:28; Lu 13:29; Lu 14:15; Lu 15:10; Lu 16:13; Lucas 16:15 [2]; Lu 16:16; Lu 17:15; Lu 17:18; Lu 17:20 [2]; Lu 17:21; Lu 18:2; Lu 18:4; Lu 18:7; Lu 18:11; Lu 18:13; Lu 18:16; Lu 18:17; Lu 18:19; Lu 18:24; Lu 18:25; Lu 18:27; Lu 18:29; Lucas 18:43 [2]; Lu 19:11; Lu 19:37; Lu 20:21; Lu 20:25; Lu 20:36; Lu 20:37 [3]; Lu 20:38; Lu 21:4; Lu 21:31; Lu 22:16; Lu 22:18; Lu 22:69; Lu 22:70; Lu 23:35; Lu 23:40; Lu 23:47; Lu 23:51; Lu 24:19; Lu 24:53; João 1:1 [2]; João 1:2; João 1:6; João 1:12; João 1:13; João 1:18; João 1:29; João 1:34; João 1:36; João 1:49; João 1:51; João 3:2 [2]; João 3:3; João 3:5; João 3:16; João 3:17; João 3:18; João 3:21; João 3:33; João 3:34 [3]; João 3:36; João 4:10; João 4:24; João 5:18 [2]; João 5:25; João 5:42; João 5:44; João 6:27; João 6:28; João 6:29; João 6:33; João 6:45; João 6:46; João 6:69; João 7:17; João 8:40; João 8:41; João 8:42 [2]; João 8:47 [2]; João 8:54; João 9:3; João 9:16; João 9:24; João 9:29; João 9:31; João 9:33; João 9:35; João 10:33; João 10:35; João 10:36; João 11:4 [2]; João 11:22 [2]; João 11:27; João 11:40; João 11:52; João 12:43; João 13:3 [2]; João 13:31; João 13:32 [2]; João 14:1; João 16:2; João 16:27; João 16:30; João 17:3; João 19:7; João 20:17 [2]; João 20:28; João 20:31; João 21:19; At 1:3; At 2:11; At 2:17; At 2:22 [2]; At 2:23; At 2:24; At 2:30; At 2:32; At 2:33; At 2:36; At 2:39; At 2:47; At 3:8; At 3:9; At 3:13 [2]; At 3:15; At 3:18; At 3:21; At 3:22; At 3:25; At 3:26; At 4:10; At 4:19 [2]; At 4:21; At 4:24 [2]; At 4:31; At 5:4; At 5:29; At 5:30; At 5:31; At 5:32; At 5:39; At 6:2; At 6:7; At 6:11; At 7:2; At 7:6; At 7:7; At 7:9; At 7:17; At 7:25; At 7:32 [4]; At 7:35; At 7:37; At 7:42; At 7:43; At 7:45; At 7:46 [2]; At 7:55 [2]; At 7:56; At 8:10; At 8:12; At 8:14; At 8:20; At 8:21; At 8:22; At 8:37; At 9:20; At 10:2 [2]; At 10:3; At 10:4; At 10:15; At 10:22; At 10:28; At 10:31; At 10:33 [2]; At 10:34; At 10:38 [2]; At 10:40; At 10:41; At 10:42; At 10:46; At 11:1; At 11:9; At 11:17 [2]; At 11:18 [2]; At 11:23; At 12:5; At 12:22; At 12:23; At 12:24; At 13:5; At 13:7; At 13:16; At 13:17; At 13:21; At 13:23; At 13:26; At 13:30; At 13:33; At 13:36; At 13:37; At 13:43; At 13:44; At 13:46; At 14:15; At 14:22; At 14:26; At 14:27; At 15:4; At 15:7; At 15:8; At 15:10; At 15:12; At 15:14; At 15:18; At 15:19; At 15:40; At 16:14; At 16:17; At 16:25; At 16:34; At 17:13; At 17:23; At 17:24; At 17:29; At 17:30; At 18:7; At 18:11; At 18:13; At 18:21; At 18:26; At 19:8; At 19:11; At 20:21; At 20:24; At 20:25; At 20:27; At 20:28; At 20:32; At 21:19; At 22:3; At 22:14; At 23:1; At 23:3; At 24:14; At 24:15; At 24:16; At 26:6; At 26:8; At 26:18; At 26:20; At 26:22; At 26:29; At 27:23; At 27:24; At 27:25; At 27:35; At 28:6; At 28:15; At 28:23; At 28:28; At 28:31; Romanos 1:1;  1:4;  1:7 [2];  1:8;  1:9;  1:10;  1:16;  1:17;  1:18;  1:19 [2];  1:21 [2];  1:23;  1:24;  1:25;  1:26;  1:28 [2];  1:32;  2:2;  2:3;  2:4;  2:5;  2:11;  2:13;  2:16;  2:17;  2:23;  2:24;  2:29;  3:2;  3:3;  3:4;  3:5 [2];  3:6;  3:7;  3:11;  3:18;  3:19;  3:21;  3:22;  3:23;  3:25 [2];  3:29;  3:30;  4:2;  4:3;  4:6;  4:17;  4:20 [2];  5:1;  5:2;  5:5;  5:8;  5:10;  5:11;  5:15;  6:10;  6:11;  6:13 [2];  6:17;  6:22;  6:23;  7:4;  7:22;  7:25 [2];  8:3;  8:7 [2];  8:8;  8:9;  8:14 [2];  8:16;  8:17;  8:19;  8:21;  8:27;  8:28;  8:31;  8:33;  8:34;  8:39;  9:5;  9:6;  9:8;  9:11;  9:14;  9:16;  9:20;  9:22;  9:26;  10:1;  10:2;  10:3;  10:9;  10:17;  11:1;  11:2 [2];  11:8;  11:21;  11:22;  11:23;  11:29;  11:30;  11:32;  11:33;  12:1 [2];  12:2;  12:3;  13:1 [2];  13:2;  13:4 [2];  14:3;  14:4;  14:6 [2];  14:11;  14:12;  14:17;  14:18;  14:20;  14:22;  15:5;  15:6;  15:7;  15:8;  15:9;  15:13;  15:15;  15:16;  15:17;  15:19;  15:30;  15:32;  15:33;  16:20;  16:26;  16:27; 1 Coríntios 1:1; 1Co 1:2; 1Co 1:3; 1Co 1:4 [2]; 1Co 1:9; 1Co 1:14; 1Co 1:18; 1Co 1:20; 1Co 1:21 [3]; 1Co 1:24 [2]; 1Co 1:25 [2]; 1Co 1:27 [2]; 1Co 1: 28; 1Co 1:30; 1Co 2:1; 1Co 2:5; 1Co 2:7 [2]; 1Co 2:9; 1Co 2:10 [2]; 1Co 2:11 [2]; 1Co 2:12 [2]; 1Co 2:14; 1Co 3:6; 1Co 3:7; 1Co 3:9; 1Co 3:10; 1Co 3:16 [2]; 1Co 3:17 [3]; 1Co 3:19;1Co 4:1; 1Co 4:5; 1Co 4:9; 1Co 4:20; 1Co 5:13; 1Co 6:9; 1Co 6:10; 1Co 6:11; 1Co 6:13; 1Co 6:14; 1Co 6:19; 1Co 6:20; 1Co 7:7; 1Co 7:15; 1Co 7:17; 1Co 7:19; 1Co 7:24; 1Co 7:40; 1Co 8:3; 1Co 8:4; 1Co 8:6; 1Co 8:8; 1Co 9:9; 1Co 9:21; 1Co 10:5; 1Co 10:13; 1Co 10:20; 1Co 10:31; 1Co 10:32; 1Co 11:3; 1Co 11:7; 1Co 11:12; 1Co 11:13; 1Co 11:16; 1Co 11:22; 1Co 12:3; 1Co 12:6; 1Co 12:18; 1Co 12:24; 1Co 12:28; 1Co 14:2; 1Co 14:18; 1Co 14:25 [2]; 1Co 14:28; 1Co 14:33; 1Co 14:36; 1Co 15:9; 1Co 15 :10 [2]; 1Co 15:15 [2]; 1Co 15:24; 1Co 15:28; 1Co 15:34; 1Co 15:38; 1Co 15:50; 1Co 15:57; 2Co 1:1 [2]; 2Co 1:2; 2Co 1:3 [2]; 2Co 1:4; 2Co 1:9; 2Co 1:12; 2Co 1:18; 2Co 1:19; 2Co 1:20 [2]; 2Co 1:21; 2Co 1:23; 2Co 2:14; 2Co 2:15; 2Co 2:17 [3]; 2Co 3:3; 2Co 3:4; 2Co 3:5; 2Co 4:2 [2]; 2Co 4:4 [2]; 2Co 4:6 [2]; 2Co 4:7; 2Co 4:15; 2Co 5:1; 2Co 5:5; 2Co 5:11; 2Co 5:13; 2Co 5:18; 2Co 5:19; 2Co 5:20 [2]; 2Co 5:21; 2Co 6:1; 2Co 6:4; 2Co 6:7; 2Co 6:16 [4]; 2Co 7:1; 2Co 7:6; 2Co 7:12; 2Co 8:1; 2Co 8:5; 2Co 8:16; 2Co 9:7; 2Co 9:8; 2Co 9:11; 2Co 9:12; 2Co 9:13; 2Co 9:14; 2Co 9:15; 2Co 10:4; 2Co 10:5; 2Co 10:13; 2Co 11:7; 2Co 11:11; 2Co 11:31; 2Co 12:2; 2Co 12:3; 2Co 12:19; 2Co 12:21; 2Co 13:4 [2]; 2Co 13:7; 2Co 13:11; 2Co 13:14; Gál 1:1; Gál 1:3; Gál 1:4; Gál 1:10; Gál 1:13; Gál 1:15; Gál 1:20; Gál 1:24; Gál 2:6; Gál 2:19; Gál 2:20; Gál 2:21; Gál 3:6; Gál 3:8; Gál 3:11; Gál 3:17; Gál 3:18; Gál 3:20; Gál 3:21; Gál 3:26; Gál 4:4; Gál 4:6; Gál 4:7; Gál 4:8; Gál 4:9 [2]; Gál 4:14; Gál 5:21; Gál 6:7; Gál 6:16; Efésios 1:1; Efésios 1:2; Efésios 1:3; Ef 1:17; Efésios 2:4; Efésios 2:8; Ef 2:10; Ef 2:16; Ef 2:19; Ef 2:22; Efésios 3:2; Efésios 3:7; Efésios 3:9; Ef 3:10; Efésios 3:19; Efésios 4:6; Ef 4:13; Ef 4:18; Ef 4:24; Ef 4:30; Ef 4:32; Efésios 5:1; Efésios 5:2; Efésios 5:5; Ef 5:6; Ef 5:20; Ef 5:21; Ef 6:6; Ef 6:11; Ef 6:13; Ef 6:17; Ef 6:23; Fp 1:2; Fp 1:3; Filipenses 1:8; Filipenses 1:11; Filipenses 1:28; Filipenses 2:6 [2]; Filipenses 2:9; Filipenses 2:11; Filipenses 2:13; Filipenses 2:15; Filipenses 2:27; Filipenses 3 :3; Filipenses 3:9; Filipenses 3:14; Filipenses 3:15; Filipenses 3:19; Filipenses 4:6; Filipenses 4:7; Filipenses 4:9; Filipenses 4:18; Filipenses 4:19; Filipenses 4 :20; Cl 1:1; Cl 1:2; Cl 1:3; Cl 1:6; Cl 1:10; Cl 1:15; Cl 1:25 [2]; Cl 1:27; Cl 2:2; Cl 2:12; Cl 2:19; Cl 3 :1; Cl 3:3; Cl 3:6; Cl 3:12; Cl 3:15; Cl 3:17; Cl 3:22; Cl 4:3; Cl 4:11; Cl 4:12; 1Ts 1 :1 [2]; 1Ts 1:2; 1Ts 1:3; 1Ts 1:4; 1Ts 1:8; 1Ts 1:9 [2]; 1Ts 2:2 [2]; 1Ts 2:4 [2]; 1Ts 2:5; 1Ts 2:8; 1Ts 2:9; 1Ts 2:10; 1Ts 2:12; 1Ts 2:13 [3]; 1Ts 2:14; 1Ts 2:15; 1Ts 3:2; 1Ts 3:9 [2]; 1Ts 3:11; 1Ts 3:13; 1Ts 4:1 ; 1Ts 4:3; 1Ts 4:5; 1Ts 4:7; 1Ts 4:8; 1Ts 4:14; 1Ts 4:16; 1Ts 5:9; 1Ts 5:18; 1Ts 5:23; 2Ts 1:1 ; 2Ts 1:2; 2Ts 1:3; 2Ts 1:4; 2Ts 1:5 [2]; 2Ts 1:6; 2Ts 1:8; 2Ts 1:11; 2Ts 1:12; 2Ts 2:4 [4]; 2Ts 2:11; 2Ts 2:13 [2]; 2Ts 2:16; 2Ts 3:5; 1Tm 1:1; 1Tm 1:2; 1Tm 1:11; 1Tm 1:17 ; 1Ti 2:3; 1Ti 2:5 [2]; 1Ti 3:5; 1Ti 3:15 [2]; 1Ti 3:16; 1Ti 4:3; 1Ti 4:4; 1Ti 4:5; 1Ti 4: 10; 1Ti 5:4; 1Ti 5:5; 1Ti 5:21; 1Ti 6:1; 1Ti 6:11; 1Ti 6:13; 1Ti 6:17; 2Ti 1:1; 2Ti 1:2; 2 Timóteo 1:3; 2 Timóteo 1:6; 2 Timóteo 1:7; 2 Timóteo 1:8; 2Timóteo 2:9; 2 Timóteo 2:15; 2 Timóteo 2:19; 2 Timóteo 2:25; 2 Timóteo 3:17; 2Timóteo 4:1; Tito 1:1; Tito 1:2; Tito 1:3; Tito 1:4; Tito 1:7; Tito 1:16; Tito 2:5; Tito 2:10; Tito 2:11; Tito 2:13; Tito 3:4; Tito 3:8; Phm 3; Phm 4; Hebreus 1:1; Hebreus 1:6; Hebreus 1:8; Hebreus 1:9 [2]; Hebreus 2:4; Hebreus 2:9; Hebreus 2:13; Hebreus 2:17; Hebreus 3:4; Hebreus 3:12; Hebreus 4:4; Hebreus 4:9; Hebreus 4:10; Hebreus 4:12; Hebreus 4:14; Hebreus 5:1; Hebreus 5:4; Hebreus 5:10; Hebreus 5:12; Hebreus 6:1; Hebreus 6:3; Hebreus 6:5; Hebreus 6:6; Hebreus 6:7; Hebreus 6:10; Hebreus 6:13; Hebreus 6:17; Hebreus 6:18; Hebreus 7:1; Hebreus 7:3; Hebreus 7:19; Hebreus 7:25; Hebreus 8:10; Hebreus 9:14 [2]; Hebreus 9:20; Hebreus 9:24; Hebreus 10:7; Hebreus 10:9; Hebreus 10:12; Hebreus 10:21; Hebreus 10:29; Hebreus 10:31; Hebreus 10:36; Hebreus 11:3; Hb 11:4 [2]; Hb 11:5 [2]; Hebreus 11:6; Hebreus 11:10; Hb 11:16 [2]; Hebreus 11:19; Hebreus 11:25; Hebreus 11:40; Hebreus 12:2; Hebreus 12:7; Hebreus 12:15; Hebreus 12:22; Hebreus 12:23; Hebreus 12:28; Hebreus 12:29; Hebreus 13:4; Hebreus 13:7; Hebreus 13:15; Hebreus 13:16; Hebreus 13:20; Tg 1:1; Tg 1:5; Tg 1:13 [2]; Tg 1:20; Tg 1:27; Tg 2:5; Tg 2:19; Tg 2:23 [2]; Tg 3:9 [2]; Tg 4:4 [2]; Tg 4:6; Tg 4:7; Tg 4:8; 1Pe 1:2; 1Pe 1:3; 1Pe 1:5; 1Pe 1:21 [2]; 1Pe 1:23; 1Pe 2:4; 1Pe 2:5; 1Pe 2:10; 1Pe 2:12; 1Pe 2:15; 1Pe 2:16; 1Pe 2:17; 1Pe 2:19; 1Pe 2:20; 1Pe 3:4; 1Pe 3:5; 1Pe 3:15; 1Pe 3:17; 1Pe 3:18; 1Pe 3:20; 1Pe 3:21; 1Pe 3:22; 1Pe 4:2; 1Pe 4:6; 1Pe 4:10; 1Pe 4:11; 1Pe 4:14; 1Pe 4:16; 1Pe 4:17 [2]; 1Pe 4:19; 1Pe 5:2; 1Pe 5:5; 1Pe 5:6; 1Pe 5:10; 1Pe 5:12; 2Pe 1:1; 2Pe 1:2; 2Pe 1:17; 2Pe 1:21; 2Pe 2:4; 2Pe 3:5; 2Pe 3:12; 1Jo 1:5; 1Jo 2:5; 1Jo 2:14; 1Jo 2:17; 1Jo 3:1; 1Jo 3:2; 1Jo 3:8; 1Jo 3:9 [2]; 1Jo 3:10 [2]; 1Jo 3:17; 1Jo 3:20; 1Jo 3:21; 1Jo 4:1; 1Jo 4:2 [2]; 1Jo 4:3; 1Jo 4:4; 1Jo 4:6 [3]; 1Jo 4:7 [3]; 1Jo 4:8 [2]; 1Jo 4:9 [2]; 1Jo 4:10; 1Jo 4:11; 1Jo 4:12 [2]; 1Jo 4:15 [3]; 1Jo 4:16 [4]; 1Jo 4:20 [2]; 1Jo 4:21; 1Jo 5:1; 1Jo 5:2 [2]; 1Jo 5:3; 1Jo 5:4; 1Jo 5:5; 1Jo 5:9 [2]; 1Jo 5:10 [3]; 1Jo 5:11; 1Jo 5:12; 1Jo 5:13 [2]; 1Jo 5:18 [2]; 1Jo 5:19; 1Jo 5:20 [2]; 2Jo 3; 2Jo 9; 3Jo 11 [2]; Judas 1; Judas 4 [2]; Judas 21; Judas 25; Ap 1:1; Ap 1:2; Ap 1:6; Ap 1:9; Ap 2:7; Ap 2:18; Ap 3:1; Ap 3:2; Ap 3:12 [4]; Ap 3:14; Ap 4:5; Ap 4:8; Ap 5:6; Ap 5:9; Ap 5:10; Ap 6:9; Ap 7:2; Ap 7:3; Ap 7:10; Ap 7:11; Ap 7:12; Ap 7:15; Ap 7:17; Ap 8:2; Ap 8:4; Ap 9:4; Ap 9:13; Ap 10:7; Ap 11:1; Ap 11:4; Ap 11:11; Ap 11:13; Ap 11:16 [2]; Ap 11:17; Ap 11:19; Ap 12:5; Ap 12:6; Ap 12:10 [2]; Ap 12:17; Ap 13:6; Ap 14:4; Ap 14:5; Ap 14:7; Ap 14:10; Ap 14:12; Ap 14:19; Ap 15:1; Ap 15:2; Ap 15:3 [2]; Ap 15:7; Ap 15:8; Ap 16:1; Ap 16:7; Ap 16:9; Apocalipse 16:11; Apocalipse 16:14; Apocalipse 16:19; Apocalipse 16:21; Apocalipse 17:17 [2]; Apocalipse 18:5; Apocalipse 18:8; Apocalipse 18:20; Apocalipse 19:1; Apocalipse 19:4; Apocalipse 19:5; Apocalipse 19:6; Apocalipse 19:9; Apocalipse 19:10; Apocalipse 19:13; Apocalipse 19:15; Apocalipse 19:17; Apocalipse 20:4; Apocalipse 20:6; Apocalipse 20:9; Apocalipse 20:12; Apocalipse 21:2; Apocalipse 21:3 [3]; Apocalipse 21:4; Apocalipse 21:7; Apocalipse 21:10; Apocalipse 21:11; Apocalipse 21:22; Apocalipse 21:23; Apocalipse 22:1; Apocalipse 22:3; Apocalipse 22:5; Ap 22:6; Ap 22:9; Ap 22:18; Ap 22:19; 2Co 1:12; 2Co 7:10; 2Co 11:2; 1Ti 1:4; 3Jo 6; Jo 10:34; Jo 10:35; At 7:40; At 14:11; At 19:26; 1Co 8:5 [2]; Gál 4:8; Mt 5:34; Mt 22:21; Mc 12:17; Lc 20:25; Jo 8:47; At 23:4; Rm 8:33; Rm 10:3; Rm 13:6; 1Co 3:9 [2]; 1Co 3:23; 1Co 6:20; Tt 1:1; 2Co 7:9; 2Co 7:11
+COMPARAR POR LIVRO:
+Deus = 1.338 vezes
+Mateus – 51 vezes:
+Mt 1:23; Mt 3:9; Mt 3:16; Mt 4:3; Mt 4:6; Mt 4:7; Mt 4:10; Mt 5:8; Mt 5:9; Mt 5:34; Mt 6:24; Mt 6:30; Mt 6:33; Mt 8:29; Mt 9:8; Mt 12:4; Mt 12:28 [2]; Mt 14:33; Mt 15:3; Mt 15:4; Mt 15:5; Mt 15:6; Mt 15:31; Mt 16:16; Mt 16:23; Mt 19:6; Mt 19:24; Mt 19:26; Mt 21:31; Mt 21:43; Mt 22:16; Mt 22:21 [2]; Mt 22:29; Mt 22:31; Mt 22:32 [4]; Mt 22:37; Mt 23:22; Mt 26:61; Mt 26:63 [2]; Mt 27:40; Mt 27:43 [2]; Mt 27:46 [2]; Mt 27:54
+Marcos – 49 vezes:
+Mr 1:1; Mr 1:14; Mr 1:15; Mr 1:24; Mr 2:7; Mr 2:12; Mr 2:26; Mr 3:11; Mr 3:35; Mr 4:11; Mr 4:26; Mr 4:30; Mr 5:7 [2]; Mr 7:8; Mr 7:9; Mr 7:11; Mr 7:13; Mr 8:33; Mr 9:1; Mr 9:47; Mr 10:9; Mr 10:14; Mr 10:15; Mr 10:18; Mr 10:23; Mr 10:24; Mr 10:25; Mr 10:27 [2]; Mr 11:22; Mr 12:14; Mr 12:17 [2]; Mr 12:24; Mr 12:26 [4]; Mr 12:27; Mr 12:29; Mr 12:30; Mr 12:34; Mr 13:19; Mr 14:25; Mr 15:34 [2]; Mr 15:39; Mr 15:43
+Lucas – 123 vezes:
+Lu 1:6; Lu 1:8; Lu 1:16; Lu 1:19; Lu 1:26; Lu 1:30; Lu 1:32; Lu 1:35; Lu 1:37; Lu 1:47; Lu 1:64; Lu 1:68; Lu 1:78; Lu 2:13; Lu 2:14; Lu 2:20; Lu 2:28; Lu 2:38; Lu 2:40; Lu 2:52; Lu 3:2; Lu 3:6; Lu 3:8; Lu 3:38; Lu 4:3; Lu 4:8; Lu 4:9; Lu 4:12; Lu 4:34; Lu 4:41; Lu 4:43; Lu 5:1; Lu 5:21; Lu 5:25; Lu 5:26; Lu 6:4; Lu 6:12; Lu 6:20; Lu 7:16 [2]; Lu 7:28; Lu 7:29; Lu 7:30; Lu 8:1; Lu 8:10; Lu 8:11; Lu 8:21; Lu 8:28; Lu 8:39; Lu 9:2; Lu 9:11; Lu 9:20; Lu 9:27; Lu 9:43; Lu 9:60; Lu 9:62; Lu 10:9; Lu 10:11; Lu 10:27; Lu 11:20 [2]; Lu 11:28; Lu 11:42; Lu 11:49; Lu 12:6; Lu 12:8; Lu 12:9; Lu 12:20; Lu 12:21; Lu 12:24; Lu 12:28; Lu 13:13; Lu 13:18; Lu 13:20; Lu 13:28; Lu 13:29; Lu 14:15; Lu 15:10; Lu 16:13; Lu 16:15 [2]; Lu 16:16; Lu 17:15; Lu 17:18; Lu 17:20 [2]; Lu 17:21; Lu 18:2; Lu 18:4; Lu 18:7; Lu 18:11; Lu 18:13; Lu 18:16; Lu 18:17; Lu 18:19; Lu 18:24; Lu 18:25; Lu 18:27; Lu 18:29; Lu 18:43 [2]; Lu 19:11; Lu 19:37; Lu 20:21; Lu 20:25 [2]; Lu 20:36; Lu 20:37 [3]; Lu 20:38; Lu 21:5; Lu 21:31; Lu 22:16; Lu 22:18; Lu 22:69; Lu 22:70; Lu 23:35; Lu 23:40; Lu 23:47; Lu 23:51; Lu 24:19; Lu 24:53
+João – 80 vezes:
+Jo 1:1 [2]; Jo 1:2; Jo 1:6; Jo 1:12; Jo 1:13; Jo 1:18 [2]; Jo 1:29; Jo 1:34; Jo 1:36; Jo 1:49; Jo 1:51; Jo 3:2 [2]; Jo 3:3; Jo 3:5; Jo 3:16; Jo 3:17; Jo 3:18; Jo 3:21; Jo 3:33; Jo 3:34 [2]; Jo 3:36; Jo 4:10; Jo 4:24; Jo 5:18 [2]; Jo 5:25; Jo 5:42; Jo 5:44; Jo 6:27; Jo 6:28; Jo 6:29; Jo 6:33; Jo 6:46; Jo 6:69; Jo 7:17; Jo 8:40; Jo 8:41; Jo 8:42 [2]; Jo 8:47 [3]; Jo 8:54; Jo 9:3; Jo 9:16; Jo 9:24; Jo 9:29; Jo 9:31 [2]; Jo 9:33; Jo 10:33; Jo 10:35; Jo 10:36; Jo 11:4 [2]; Jo 11:22 [2]; Jo 11:27; Jo 11:40; Jo 11:52; Jo 12:43; Jo 13:3 [2]; Jo 13:31; Jo 13:32; Jo 14:1; Jo 16:2; Jo 16:27; Jo 16:30; Jo 17:3; Jo 19:7; Jo 20:17 [2]; Jo 20:28; Jo 20:31; Jo 21:19
+Atos – 169 vezes:
+At 1:3; At 2:11; At 2:17; At 2:22 [2]; At 2:23; At 2:24; At 2:30; At 2:32; At 2:33; At 2:36; At 2:39; At 2:47; At 3:8; At 3:9; At 3:12; At 3:13 [2]; At 3:15; At 3:18; At 3:21; At 3:22; At 3:25; At 3:26; At 4:10; At 4:19 [2]; At 4:21; At 4:24; At 4:31; At 5:4; At 5:29; At 5:30; At 5:31; At 5:32; At 5:39 [2]; At 6:2; At 6:7; At 6:11; At 7:2; At 7:4; At 7:6; At 7:7; At 7:9; At 7:17; At 7:25; At 7:32 [2]; At 7:35; At 7:37; At 7:42; At 7:43; At 7:45; At 7:46 [2]; At 7:55 [2]; At 7:56; At 8:10; At 8:12; At 8:14; At 8:20; At 8:21; At 9:20; At 10:2 [2]; At 10:3; At 10:4; At 10:15; At 10:22; At 10:28; At 10:31; At 10:33; At 10:34; At 10:38 [2]; At 10:40; At 10:41; At 10:42; At 10:46; At 11:1; At 11:9; At 11:17 [2]; At 11:18 [2]; At 11:23; At 12:5; At 12:22; At 12:23; At 13:5; At 13:7; At 13:16; At 13:17 [2]; At 13:21; At 13:23; At 13:26; At 13:30; At 13:33; At 13:34; At 13:36; At 13:37; At 13:43 [2]; At 13:46; At 13:50; At 14:15; At 14:22; At 14:26; At 14:27; At 15:4; At 15:7; At 15:8; At 15:10; At 15:12; At 15:14; At 15:19; At 16:10; At 16:14; At 16:17; At 16:25; At 16:34; At 17:4; At 17:13; At 17:17; At 17:23; At 17:24; At 17:27; At 17:29; At 17:30; At 18:7; At 18:11; At 18:13; At 18:26; At 18:27; At 19:8; At 19:11; At 20:21; At 20:24; At 20:27; At 20:28; At 20:32; At 21:19; At 21:20; At 22:3; At 22:14; At 23:1; At 23:3; At 23:4; At 24:14; At 24:15; At 24:16; At 26:6; At 26:8; At 26:18; At 26:20; At 26:22; At 26:29; At 27:23; At 27:24; At 27:25; At 27:35; At 28:6; At 28:15; At 28:23; At 28:28; At 28:31
+Romanos – 157 vezes:
+Ro 1:1; Ro 1:4; Ro 1:7 [2]; Ro 1:8; Ro 1:9; Ro 1:10; Ro 1:16; Ro 1:17; Ro 1:18; Ro 1:19 [2]; Ro 1:21 [2]; Ro 1:23; Ro 1:24; Ro 1:25; Ro 1:26; Ro 1:28 [2]; Ro 1:30; Ro 1:32; Ro 2:2; Ro 2:3; Ro 2:4; Ro 2:5; Ro 2:11; Ro 2:13; Ro 2:16; Ro 2:17; Ro 2:23; Ro 2:24; Ro 2:29; Ro 3:2; Ro 3:3; Ro 3:4; Ro 3:5 [2]; Ro 3:6; Ro 3:7; Ro 3:11; Ro 3:18; Ro 3:19; Ro 3:21; Ro 3:22; Ro 3:23; Ro 3:25 [2]; Ro 3:29 [3]; Ro 3:30; Ro 4:2; Ro 4:6; Ro 4:17; Ro 4:20 [2]; Ro 5:1; Ro 5:2; Ro 5:5; Ro 5:8; Ro 5:10; Ro 5:11; Ro 5:15; Ro 6:10; Ro 6:11; Ro 6:13 [2]; Ro 6:17; Ro 6:22; Ro 6:23; Ro 7:4; Ro 7:22; Ro 7:25 [2]; Ro 8:3; Ro 8:7 [2]; Ro 8:8; Ro 8:9; Ro 8:14 [2]; Ro 8:16; Ro 8:17; Ro 8:19; Ro 8:21; Ro 8:27; Ro 8:28 [2]; Ro 8:31; Ro 8:33 [2]; Ro 8:34; Ro 8:39; Ro 9:5; Ro 9:6; Ro 9:8; Ro 9:11; Ro 9:14; Ro 9:16; Ro 9:20; Ro 9:22; Ro 9:26; Ro 10:1; Ro 10:2; Ro 10:3 [2]; Ro 10:9; Ro 11:1; Ro 11:2 [2]; Ro 11:8; Ro 11:21; Ro 11:22 [2]; Ro 11:23; Ro 11:28; Ro 11:29; Ro 11:30; Ro 11:32; Ro 11:33; Ro 12:1 [2]; Ro 12:2; Ro 12:3; Ro 13:1 [2]; Ro 13:2; Ro 13:4 [2]; Ro 13:6; Ro 14:3; Ro 14:6 [2]; Ro 14:10; Ro 14:11; Ro 14:12; Ro 14:17; Ro 14:18; Ro 14:20; Ro 14:22; Ro 15:5; Ro 15:6; Ro 15:7; Ro 15:8; Ro 15:9; Ro 15:13; Ro 15:15; Ro 15:16; Ro 15:17; Ro 15:19; Ro 15:30; Ro 15:32; Ro 15:33; Ro 16:20; Ro 16:26; Ro 16:27
+1 Coríntios – 107 vezes:
+1Co 1:1; 1Co 1:2; 1Co 1:3; 1Co 1:4 [2]; 1Co 1:9; 1Co 1:14; 1Co 1:18; 1Co 1:20; 1Co 1:21 [3]; 1Co 1:24 [2]; 1Co 1:25 [2]; 1Co 1:27 [2]; 1Co 1:28; 1Co 1:29; 1Co 1:30; 1Co 2:1; 1Co 2:5; 1Co 2:7 [2]; 1Co 2:9; 1Co 2:10 [2]; 1Co 2:11 [2]; 1Co 2:12 [2]; 1Co 2:14; 1Co 3:6; 1Co 3:7; 1Co 3:9 [3]; 1Co 3:10; 1Co 3:16 [2]; 1Co 3:17 [3]; 1Co 3:19; 1Co 3:23; 1Co 4:1; 1Co 4:5; 1Co 4:9; 1Co 4:20; 1Co 5:13; 1Co 6:9; 1Co 6:10; 1Co 6:11; 1Co 6:13; 1Co 6:14; 1Co 6:19; 1Co 6:20; 1Co 7:7; 1Co 7:15; 1Co 7:17; 1Co 7:19; 1Co 7:24; 1Co 7:40; 1Co 8:3; 1Co 8:4; 1Co 8:6; 1Co 8:8; 1Co 9:9; 1Co 9:21; 1Co 10:5; 1Co 10:13; 1Co 10:20; 1Co 10:31; 1Co 10:32; 1Co 11:3; 1Co 11:7; 1Co 11:12; 1Co 11:13; 1Co 11:16; 1Co 11:22; 1Co 12:3; 1Co 12:6; 1Co 12:18; 1Co 12:24; 1Co 12:28; 1Co 14:2; 1Co 14:18; 1Co 14:25 [2]; 1Co 14:28; 1Co 14:33 [2]; 1Co 14:36; 1Co 15:9; 1Co 15:10 [2]; 1Co 15:15 [2]; 1Co 15:24; 1Co 15:25; 1Co 15:27; 1Co 15:28; 1Co 15:34; 1Co 15:38; 1Co 15:50; 1Co 15:57
+2 Coríntios – 79 vezes:
+2Co 1:1 [2]; 2Co 1:2; 2Co 1:3 [2]; 2Co 1:4; 2Co 1:9; 2Co 1:12 [2]; 2Co 1:18; 2Co 1:19; 2Co 1:20 [2]; 2Co 1:21; 2Co 1:23; 2Co 2:14; 2Co 2:15; 2Co 2:17 [3]; 2Co 3:3; 2Co 3:4; 2Co 3:5; 2Co 4:2 [2]; 2Co 4:4 [2]; 2Co 4:6 [2]; 2Co 4:7; 2Co 4:15; 2Co 5:1; 2Co 5:5; 2Co 5:11; 2Co 5:13; 2Co 5:18; 2Co 5:19; 2Co 5:20 [2]; 2Co 5:21; 2Co 6:1; 2Co 6:4; 2Co 6:7; 2Co 6:16 [4]; 2Co 7:1; 2Co 7:6; 2Co 7:9; 2Co 7:10; 2Co 7:11; 2Co 7:12; 2Co 8:1; 2Co 8:5; 2Co 8:16; 2Co 9:7; 2Co 9:8; 2Co 9:11; 2Co 9:12; 2Co 9:13; 2Co 9:14; 2Co 9:15; 2Co 10:4; 2Co 10:5; 2Co 10:13; 2Co 11:2; 2Co 11:7; 2Co 11:11; 2Co 11:31; 2Co 12:2; 2Co 12:3; 2Co 12:19; 2Co 12:21; 2Co 13:4 [2]; 2Co 13:7; 2Co 13:11; 2Co 13:14
+Gálatas – 29 vezes:
+Gál 1:1; Gál 1:3; Gál 1:4; Gál 1:10; Gál 1:13; Gál 1:15; Gál 1:20; Gál 1:24; Gál 2:6; Gál 2:19; Gál 2:20; Gál 2:21; Gál 3:8; Gál 3:11; Gál 3:17; Gál 3:18; Gál 3:20; Gál 3:21; Gál 3:26; Gál 4:4; Gál 4:6; Gál 4:7; Gál 4:8; Gál 4:9 [2]; Gál 4:14; Gál 5:21; Gál 6:7; Gál 6:16
+38 – 38 vezes:
+Ef 1:1; Ef 1:2; Ef 1:3; Ef 1:13; Ef 1:17; Ef 2:1; Ef 2:4; Ef 2:6; Ef 2:8; Ef 2:10 [2]; Ef 2:12; Ef 2:16; Ef 2:19; Ef 2:22; Ef 3:2; Ef 3:7; Ef 3:9; Ef 3:10; Ef 3:12; Ef 3:19; Ef 4:6; Ef 4:13; Ef 4:18; Ef 4:24; Ef 4:30; Ef 4:32; Ef 5:1; Ef 5:2; Ef 5:5; Ef 5:6; Ef 5:19; Ef 5:20; Ef 6:6; Ef 6:11; Ef 6:13; Ef 6:17; Ef 6:23
+Filipenses – 24 vezes:
+Fil 1:2; Fil 1:3; Fil 1:8; Fil 1:11; Fil 1:14; Fil 1:28; Fil 2:6 [2]; Fil 2:9; Fil 2:11; Fil 2:13; Fil 2:15; Fil 2:27; Fil 3:3; Fil 3:9; Fil 3:14; Fil 3:15; Fil 3:19; Fil 4:6; Fil 4:7; Fil 4:9; Fil 4:18; Fil 4:19; Fil 4:20
+Colossenses – 24 vezes:
+Col 1:1; Col 1:2; Col 1:3; Col 1:6; Col 1:10; Col 1:15; Col 1:19; Col 1:21; Col 1:25 [2]; Col 1:27; Col 2:2; Col 2:12; Col 2:13; Col 2:19; Col 3:1; Col 3:3; Col 3:6; Col 3:12; Col 3:16; Col 3:17; Col 4:3; Col 4:11; Col 4:12
+1 Tessalonicenses – 37 vezes:
+1Te 1:1; 1Te 1:2; 1Te 1:3; 1Te 1:4; 1Te 1:8; 1Te 1:9 [2]; 1Te 2:2 [2]; 1Te 2:4 [2]; 1Te 2:5; 1Te 2:8; 1Te 2:9; 1Te 2:10; 1Te 2:12; 1Te 2:13 [3]; 1Te 2:14; 1Te 2:15; 1Te 3:2; 1Te 3:9 [2]; 1Te 3:11; 1Te 3:13; 1Te 4:1; 1Te 4:3; 1Te 4:5; 1Te 4:7; 1Te 4:8; 1Te 4:9; 1Te 4:14; 1Te 4:16; 1Te 5:9; 1Te 5:18; 1Te 5:23
+2 Tessalonicenses – 18 vezes:
+2Te 1:1; 2Te 1:2; 2Te 1:3; 2Te 1:4; 2Te 1:5 [2]; 2Te 1:6; 2Te 1:8; 2Te 1:11; 2Te 1:12; 2Te 2:4 [3]; 2Te 2:11; 2Te 2:13 [2]; 2Te 2:16; 2Te 3:5
+1 Timóteo – 32 vezes:
+1Ti 1:1; 1Ti 1:2; 1Ti 1:4; 1Ti 1:11; 1Ti 1:17; 1Ti 2:2; 1Ti 2:3; 1Ti 2:5 [2]; 1Ti 2:10; 1Ti 3:5; 1Ti 3:15 [2]; 1Ti 3:16; 1Ti 4:3; 1Ti 4:4; 1Ti 4:5; 1Ti 4:7; 1Ti 4:8; 1Ti 4:10; 1Ti 5:4 [2]; 1Ti 5:5; 1Ti 5:21; 1Ti 6:1; 1Ti 6:3; 1Ti 6:5; 1Ti 6:6; 1Ti 6:11 [2]; 1Ti 6:13; 1Ti 6:17
+2 Timóteo – 17 vezes:
+2Ti 1:1; 2Ti 1:2; 2Ti 1:3; 2Ti 1:6; 2Ti 1:7; 2Ti 1:8; 2Ti 2:9; 2Ti 2:14; 2Ti 2:15; 2Ti 2:19; 2Ti 2:25; 2Ti 3:4; 2Ti 3:5; 2Ti 3:12; 2Ti 3:16; 2Ti 3:17; 2Ti 4:1
+Tito – 15 vezes:
+Tit 1:1 [3]; Tit 1:2; Tit 1:3; Tit 1:4; Tit 1:7; Tit 1:16; Tit 2:5; Tit 2:10; Tit 2:11; Tit 2:12; Tit 2:13; Tit 3:4; Tit 3:8
+Filêmon – 2 vezes:
+Filêm 3; Filêm 4
+Hebreus – 79 vezes:
+He 1:1; He 1:3; He 1:5; He 1:6; He 1:8; He 1:9 [2]; He 2:4; He 2:8; He 2:9; He 2:17; He 3:4; He 3:6; He 3:12; He 3:16; He 3:17; He 4:4; He 4:8; He 4:9; He 4:10 [2]; He 4:12; He 4:14; He 5:1; He 5:4; He 5:7; He 5:10; He 5:12; He 6:1; He 6:3; He 6:5; He 6:6; He 6:7; He 6:10; He 6:13; He 6:17; He 6:18; He 7:1; He 7:3; He 7:19; He 7:25; He 8:10; He 9:14 [2]; He 9:20; He 9:24; He 10:7; He 10:12; He 10:21; He 10:29; He 10:31; He 10:36; He 11:3; He 11:4 [2]; He 11:5 [2]; He 11:6 [2]; He 11:7; He 11:10; He 11:16 [2]; He 11:19; He 11:21; He 11:25; He 11:40; He 12:2; He 12:7; He 12:15; He 12:22; He 12:23; He 12:28; He 12:29; He 13:4; He 13:7; He 13:15; He 13:16; He 13:20
+Tiago – 15 vezes:
+Tg 1:1; Tg 1:5; Tg 1:13 [2]; Tg 1:20; Tg 1:26; Tg 1:27; Tg 2:5; Tg 2:19; Tg 3:9; Tg 4:4 [2]; Tg 4:6; Tg 4:7; Tg 4:8
+1 Pedro – 40 vezes:
+1Pe 1:2; 1Pe 1:3; 1Pe 1:5; 1Pe 1:21 [2]; 1Pe 1:23; 1Pe 2:4; 1Pe 2:5; 1Pe 2:10; 1Pe 2:12; 1Pe 2:15; 1Pe 2:16; 1Pe 2:17; 1Pe 2:19; 1Pe 2:20; 1Pe 3:4; 1Pe 3:5; 1Pe 3:17; 1Pe 3:18; 1Pe 3:20; 1Pe 3:21; 1Pe 3:22; 1Pe 4:2; 1Pe 4:6; 1Pe 4:10; 1Pe 4:11 [3]; 1Pe 4:14; 1Pe 4:16; 1Pe 4:17 [2]; 1Pe 4:19; 1Pe 5:2 [2]; 1Pe 5:3; 1Pe 5:5; 1Pe 5:6; 1Pe 5:10; 1Pe 5:12
+2 Pedro – 10 vezes:
+2Pe 1:1; 2Pe 1:2; 2Pe 1:3; 2Pe 1:6; 2Pe 1:7; 2Pe 1:17; 2Pe 1:21; 2Pe 2:4; 2Pe 3:5; 2Pe 3:11
+1 João – 63 vezes:
+1Jo 1:5; 1Jo 2:5; 1Jo 2:14; 1Jo 2:17; 1Jo 3:1; 1Jo 3:2; 1Jo 3:8; 1Jo 3:9 [2]; 1Jo 3:10 [2]; 1Jo 3:17; 1Jo 3:20; 1Jo 3:21; 1Jo 4:1; 1Jo 4:2 [2]; 1Jo 4:3; 1Jo 4:4; 1Jo 4:6 [3]; 1Jo 4:7 [3]; 1Jo 4:8 [2]; 1Jo 4:9 [2]; 1Jo 4:10; 1Jo 4:11; 1Jo 4:12 [2]; 1Jo 4:15 [3]; 1Jo 4:16 [4]; 1Jo 4:20 [2]; 1Jo 4:21; 1Jo 5:1; 1Jo 5:2 [2]; 1Jo 5:3; 1Jo 5:4; 1Jo 5:5; 1Jo 5:9 [2]; 1Jo 5:10 [3]; 1Jo 5:11; 1Jo 5:12; 1Jo 5:13; 1Jo 5:16; 1Jo 5:18 [2]; 1Jo 5:19; 1Jo 5:20 [2]
+2 João – 2 vezes:
+2Jo 3; 2Jo 9
+3 João – 3 vezes:
+3Jo 6; 3Jo 11 [2]
+Judas – 4 vezes:
+Ju 1; Ju 4; Ju 21; Ju 25
+Apocalipse – 95 vezes:
+Ap 1:1; Ap 1:2; Ap 1:6; Ap 1:8; Ap 1:9; Ap 2:7; Ap 2:18; Ap 3:1; Ap 3:2; Ap 3:12 [4]; Ap 3:14; Ap 4:5; Ap 4:8; Ap 4:11; Ap 5:6; Ap 5:9; Ap 5:10; Ap 6:9; Ap 7:2; Ap 7:3; Ap 7:10; Ap 7:11; Ap 7:12; Ap 7:15; Ap 7:17; Ap 8:2; Ap 8:4; Ap 9:4; Ap 9:13; Ap 10:7; Ap 11:1; Ap 11:11; Ap 11:13; Ap 11:16 [2]; Ap 11:17; Ap 11:19; Ap 12:5; Ap 12:6; Ap 12:10 [2]; Ap 12:17; Ap 13:6; Ap 14:4; Ap 14:7; Ap 14:10; Ap 14:12; Ap 14:19; Ap 15:1; Ap 15:2; Ap 15:3 [2]; Ap 15:7; Ap 15:8; Ap 16:1; Ap 16:7; Ap 16:9; Ap 16:11; Ap 16:14; Ap 16:19; Ap 16:21; Ap 17:17 [2]; Ap 18:5; Ap 18:8; Ap 18:20; Ap 19:1; Ap 19:4; Ap 19:5; Ap 19:6; Ap 19:9; Ap 19:10; Ap 19:13; Ap 19:15; Ap 19:17; Ap 20:4; Ap 20:6; Ap 21:2; Ap 21:3 [2]; Ap 21:7; Ap 21:10; Ap 21:11; Ap 21:22; Ap 21:23; Ap 22:1; Ap 22:3; Ap 22:5; Ap 22:6; Ap 22:9; Ap 22:18; Ap 22:19
+Jeová - 237 vezes
+Mateus – 18 vezes:
+Mt 1:20; Mt 1:22; Mt 1:24; Mt 2:13; Mt 2:15; Mt 2:19; Mt 3:3; Mt 4:4; Mt 4:7; Mt 4:10; Mt 5:33; Mt 21:9; Mt 21:42; Mt 22:37; Mt 22:44; Mt 23:39; Mt 27:10; Mt 28:2
+Marcos – 9 vezes:
+Mr 1:3; Mr 5:19; Mr 11:9; Mr 12:11; Mr 12:29 [2]; Mr 12:30; Mr 12:36; Mr 13:20
+Lucas – 36 vezes:
+Lu 1:6; Lu 1:9; Lu 1:11; Lu 1:15; Lu 1:16; Lu 1:17; Lu 1:25; Lu 1:28; Lu 1:32; Lu 1:38; Lu 1:45; Lu 1:46; Lu 1:58; Lu 1:66; Lu 1:68; Lu 1:76; Lu 2:9 [2]; Lu 2:15; Lu 2:22; Lu 2:23 [2]; Lu 2:24; Lu 2:26; Lu 2:39; Lu 3:4; Lu 4:8; Lu 4:12; Lu 4:18; Lu 4:19; Lu 5:17; Lu 10:27; Lu 13:35; Lu 19:38; Lu 20:37; Lu 20:42
+João – 5 vezes:
+Jo 1:23; Jo 6:45; Jo 12:13; Jo 12:38 [2]
+Atos – 52 vezes:
+At 1:24; At 2:20; At 2:21; At 2:25; At 2:34; At 2:39; At 2:47; At 3:19; At 3:22; At 4:26; At 4:29; At 5:9; At 5:19; At 7:31; At 7:33; At 7:49; At 7:60; At 8:22; At 8:24; At 8:25; At 8:26; At 8:39; At 9:31; At 10:33; At 11:21; At 12:7; At 12:11; At 12:17; At 12:23; At 12:24; At 13:2; At 13:10; At 13:11; At 13:12; At 13:44; At 13:47; At 13:48; At 13:49; At 14:3; At 14:23; At 15:17 [2]; At 15:35; At 15:36; At 15:40; At 16:14; At 16:15; At 16:32; At 18:21; At 18:25; At 19:20; At 21:14
+Romanos – 19 vezes:
+Ro 4:3; Ro 4:8; Ro 9:28; Ro 9:29; Ro 10:13; Ro 10:16; Ro 11:3; Ro 11:34; Ro 12:11; Ro 12:19; Ro 14:4; Ro 14:6 [3]; Ro 14:8 [3]; Ro 14:11; Ro 15:11
+1 Coríntios – 15 vezes:
+1Co 1:31; 1Co 2:16; 1Co 3:20; 1Co 4:4; 1Co 4:19; 1Co 7:17; 1Co 10:9; 1Co 10:21 [2]; 1Co 10:22; 1Co 10:26; 1Co 11:32; 1Co 14:21; 1Co 16:7; 1Co 16:10
+2 Coríntios – 10 vezes:
+2Co 3:16; 2Co 3:17 [2]; 2Co 3:18 [2]; 2Co 6:17; 2Co 6:18; 2Co 8:21; 2Co 10:17; 2Co 10:18
+Gálatas – 1 vez:
+Gál 3:6
+Efésios – 6 vezes:
+Ef 2:21; Ef 5:17; Ef 5:19; Ef 6:4; Ef 6:7; Ef 6:8
+Colossenses – 6 vezes:
+Col 1:10; Col 3:13; Col 3:16; Col 3:22; Col 3:23; Col 3:24
+1 Tessalonicenses – 4 vezes:
+1Te 1:8; 1Te 4:6; 1Te 4:15; 1Te 5:2
+2 Tessalonicenses – 3 vezes:
+2Te 2:2; 2Te 2:13; 2Te 3:1
+2 Timóteo – 4 vezes:
+2Ti 1:18; 2Ti 2:19 [2]; 2Ti 4:14
+Hebreus – 12 vezes:
+He 2:13; He 7:21; He 8:2; He 8:8; He 8:9; He 8:10; He 8:11; He 10:16; He 10:30; He 12:5; He 12:6; He 13:6
+Tiago – 13 vezes:
+Tg 1:7; Tg 1:12; Tg 2:23 [2]; Tg 3:9; Tg 4:10; Tg 4:15; Tg 5:4; Tg 5:10; Tg 5:11 [2]; Tg 5:14; Tg 5:15
+1 Pedro – 3 vezes:
+1Pe 1:25; 1Pe 3:12 [2]
+2 Pedro – 6 vezes:
+2Pe 2:9; 2Pe 2:11; 2Pe 3:8; 2Pe 3:9; 2Pe 3:10; 2Pe 3:12
+Judas – 3 vezes:
+Ju 5; Ju 9; Ju 14
+Apocalipse – 12 vezes:
+Ap 1:8; Ap 4:8; Ap 4:11; Ap 11:17; Ap 15:3; Ap 15:4; Ap 16:7; Ap 18:8; Ap 19:6; Ap 21:22; Ap 22:5; Ap 22:6
+</em>
+  </div>
+</div>
